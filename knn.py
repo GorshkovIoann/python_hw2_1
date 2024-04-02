@@ -1,6 +1,4 @@
 from typing import Union
-import sklearn.datasets as skd
-import scipy.stats as sps
 import numpy as np
 
 

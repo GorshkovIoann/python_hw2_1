@@ -1,4 +1,3 @@
-from scipy.spatial.distance import cdist
 from typing import Union
 import numpy as np
 
@@ -48,8 +47,6 @@ class NR:
             abscissa = abscissa.reshape(abscissa.shape[0], 1)
             self._abscissa = self._abscissa.reshape(self._abscissa.shape[0], 1)
         if self._metric == 'l1':
-            print(abscissa, len(abscissa.shape))
-            print(self._abscissa)
             distances = np.linalg.norm(
                 self._abscissa - abscissa[:, np.newaxis], axis=2)
         if self._metric == 'l2':

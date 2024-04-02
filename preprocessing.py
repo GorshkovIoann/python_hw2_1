@@ -1,5 +1,3 @@
-import sklearn.datasets as skd
-import scipy.stats as sps
 import numpy as np
 
 
@@ -7,7 +5,7 @@ class ShapeMismatchError(Exception):
     pass
 
 
-def train_test_split(
+def test_split(
     shuffle: bool,
     features: np.ndarray,
     targets: np.ndarray,
