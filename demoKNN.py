@@ -1,7 +1,7 @@
 import sklearn.datasets as skd
-from preprocessing import test_split
-from knn import KNN
-from metric import get_accuracy_score
+from presorting.preprocessing import test_split
+from predictors.knn import KNN
+from quality_marks.metric import get_accuracy_score
 
 from utils import (
     visualize_comparison,

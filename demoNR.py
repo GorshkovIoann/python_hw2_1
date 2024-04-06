@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-from nonparamic_regr import NR
-from metric import MAE, MSE, R_2
+from predictors.nonparamic_regr import NR
+from quality_marks.metric import MAE, MSE, R_2
 
 
 K_NEIGHBOURS = 8
@@ -21,7 +21,8 @@ def visualize_results(
     predictions: list,
 ) -> None:
     axis.scatter(abscissa, ordinates, label='source', c='royalblue', s=1)
-    axis.plot(abscissa, predictions, label='prediction', c='steelblue')
+    axis.plot(abscissa, predictions, label='prediction',
+              c='violet', linewidth=1.5)
 
     axis.set_xlim(min(abscissa), max(abscissa))
     axis.legend()
@@ -56,7 +57,7 @@ def get_demonstration(
 
 def main() -> None:
     functions = [linear, linear_modulated]
-    regressors = [NR(2, 'l2'), NR()]
+    regressors = [NR(metric='l2'), NR()]
 
     for function in functions:
 
