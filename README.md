@@ -1,2 +1,2 @@
-# python_hw2_-
-algoritms and all around
+# python_hw2_1
+реализация с нуля knn и nr
